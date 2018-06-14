@@ -2,7 +2,13 @@ let fs = require('fs');
 
 const yourAnswerFunctionComesHere = data => {
   console.log("---this is data---");
-  console.log(data);
+  
+  var input = data.split(' ')
+  var result = input.sort((a, b) => b - a);
+
+  console.log(result.join(' '));
+  var result2 = input.sort()
+  console.log(result2.join(' '));
 }
 
 const readFile = path => {
