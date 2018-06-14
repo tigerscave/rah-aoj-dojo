@@ -2,7 +2,13 @@ let fs = require('fs');
 
 const yourAnswerFunctionComesHere = data => {
   console.log("---this is data---");
-  console.log(data);
+  const input = String(data.split(' ')); 
+  const result = input.toUpperCase(); 
+  console.log(result, typeof(result));
+  
+  //const result = input.toUpperCase(); 
+  //console.log(result.join());
+  
 }
 
 const readFile = path => {
