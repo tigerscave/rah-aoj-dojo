@@ -2,9 +2,9 @@ let fs = require('fs');
 
 const yourAnswerFunctionComesHere = data => {
   console.log("---this is data---");
-  const input = String(data.split(' ')); 
-  const result = input.toUpperCase(); 
-  console.log(result, typeof(result));
+  const input = String(data); 
+  const result = input.toUpperCase().split(' '); 
+  console.log(result.join(' '));
   
   //const result = input.toUpperCase(); 
   //console.log(result.join());
