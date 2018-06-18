@@ -1,5 +1,4 @@
-let fs = require('fs');
-
+const fs = require('fs')
 const yourAnswerFunctionComesHere = data => {
   console.log("---this is data---");
   console.log(data);
@@ -9,25 +8,26 @@ const yourAnswerFunctionComesHere = data => {
   //console.log(input);
   let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   console.log("_____this is the answer______");
+
   for (let i = 0; i < input.length; i++) {
-    const number = input[i].split(' ')
+    
+    const arry = input[i].split(' ')
     //console.log(number);
     
-    let month = number[0]; 
+    const month = arry[0]; 
     if (month == 0) break; 
-    let day = number[1]; 
+    const day = arry[1]; 
     let time = new Date(); 
     
-    let setYear = time.setFullYear(2004)
-    let setMonth = time.setMonth(month - 1); 
-    let setDay = time.setDate(day); 
+    time.setFullYear(2004)
+    time.setMonth(month - 1); 
+    time.setDate(day); 
     
     let output = days[time.getDay()]
     
     console.log(output);
     //console.log(time);
   }
-  
   
 }
 
